@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 public class View extends JFrame {
 	private GridLayout layout;
 	private JPanel pane;
-	private JTextField text;
+	public JTextField text;
 	private String names[]={"  "," ","log","y√x","←","CE","C","±","√","sinh","sin","x²","7","8","9","/","mod","cosh","cos","x³","4","5","6","*","1/x","tanh","tan","x^y","1","2","3","-","10^x","Int","n!","³√x","0",".","+","="};
 	public  int length=names.length;
 	private final JButton [] b1;
@@ -50,9 +50,9 @@ public class View extends JFrame {
     {
     	text.setText(result);
     }
-    public JButton getB(int count)
+    public String getB(int count)
     {
-    	return b1[count];
+    	return names[count];
     }
 	 void addCalculationListener(ActionListener  event ,int count)
 	 {
@@ -62,5 +62,13 @@ public class View extends JFrame {
 	 public void setResult(String Result)
 	 {
 		 text.setText(Result);
+	 }
+	 public void setText(String Result)
+	 {
+		 text.setText(Result);
+	 }
+	 public String getText()
+	 {
+		return text.getText();
 	 }
 }

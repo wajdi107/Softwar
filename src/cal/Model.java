@@ -6,11 +6,11 @@ import javax.swing.JOptionPane;
 
 public class Model
 {
-	private  int          state=0;
-	private  String       result="";
+	private int           state=0;
+	private String        result="";
 	private String        names[]={"  "," ","log","y√x","←","CE","C","±","√","sinh","sin","x²","7","8","9","/","mod","cosh","cos","x³","4","5","6","*","1/x","tanh","tan","x^y","1","2","3","-","10^x","Int","n!","³√x","0",".","+","="};
 	private Stack<String> stack=new Stack<String>();	;
-	public  void          input(String key,int count)
+	public  void          input        (String key,int count)
 	{
 		String value="";
 	    String value1="";
@@ -209,7 +209,7 @@ public class Model
 		}
 			
 	}
-	public  String        evalution(String z,String o,String p)
+	public  String        evalution    (String z,String o,String p)
 	{
 		
 		///
@@ -345,7 +345,7 @@ public class Model
 		}	
 		return check;
 	}
-	public void setMassage(int state)
+	public  void          setMassage   (int state)
     {
     	
     	switch(state)
@@ -366,7 +366,7 @@ public class Model
     	}
     }
 	private boolean       nonflag=false;
-	public  boolean       checkDecimal(String z)
+	public  boolean       checkDecimal (String z)
 	{
 		
 		boolean flag=true;
@@ -389,7 +389,7 @@ public class Model
 		}
 		return flag;
 	}
-	public  String        concat(String x,String y)
+	public  String        concat       (String x,String y)
 	{
 		String z=x+y;
 		if(checkDecimal(z))
@@ -398,12 +398,12 @@ public class Model
 			return x;
 		
 	}
-    public  String        getResult()
+    public  String        getResult    ()
     {
     	setMassage(getState());
     	return result;
     }
-	public int getState()
+	public  int           getState     ()
 	{return state;}
 
 }
